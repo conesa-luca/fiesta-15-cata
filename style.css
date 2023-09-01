@@ -16,7 +16,6 @@ body {
     padding: 0;
 }
 
-
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -56,7 +55,7 @@ section h2 {
     color: #e91e63;
     margin-bottom: 15px;
     font-family: 'Pacifico', cursive;
-font-family: 'Walter Turncoat', cursive;
+    font-family: 'Walter Turncoat', cursive;
 }
 
 section p {
@@ -69,7 +68,7 @@ section p {
 .map {
     position: relative;
     overflow: hidden;
-    padding-top: 56.25%; /* Relación de aspecto para vídeo 16:9 */
+    padding-top: 40%; /* Relación de aspecto para vídeo 16:9 */
     border-radius: 20px;
 }
 
@@ -100,7 +99,6 @@ section:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 /* Estilos para el formulario de RSVP */
 .rsvp-form {
@@ -169,6 +167,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #c2185b;
 }
+
 /* Estilos para la galería de fotos */
 /* Estilos adicionales para personalización */
 .photo-gallery {
@@ -182,72 +181,91 @@ button[type="submit"]:hover {
     margin-bottom: 20px;
 }
 /* Estilos para el footer */
+/* Estilos para el nuevo footer */
 .footer {
-    background-color: #333;
+    background-color: #1a1a1a;
     color: #fff;
-    padding: 40px 0;
+    padding: 60px 0;
+    text-align: center;
 }
 
 .footer-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .footer-logo {
-    flex: 1;
+    flex: 1 1 calc(33.33% - 20px);
+    text-align: left;
 }
 
 .footer-logo h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
+    font-weight: bold;
+    color: #e91e63;
 }
 
 .footer-logo p {
     font-size: 1rem;
     opacity: 0.7;
+    line-height: 1.5;
 }
 
 .footer-contact {
-    flex: 1;
+    flex: 1 1 calc(33.33% - 20px);
+    text-align: center;
+    margin-top: 20px;
 }
 
 .footer-contact h2 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    color: #e91e63;
 }
 
 .footer-contact p {
     font-size: 1rem;
-    margin: 5px 0;
+    margin: 0;
     opacity: 0.7;
+    line-height: 1.5;
 }
 
 .footer-social {
-    flex: 1;
+    flex: 1 1 calc(33.33% - 20px);
+    text-align: right;
+    margin-top: 20px;
 }
 
 .footer-social h2 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    color: #e91e63;
 }
 
 .social-icon {
     display: inline-block;
-    font-size: 1.2rem;
-    margin: 5px 0;
+    font-size: 1.5rem;
+    margin: 0 10px;
     color: #fff;
     text-decoration: none;
     transition: opacity 0.3s ease;
 }
 
-.social-icon img {
-    width: 16px; 
-    margin-right: 5px; 
+.social-icon:hover {
+    opacity: 0.7;
 }
+
+.social-icon img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
 h1 {
     font-size: 72px; 
     font-weight: bold; 
@@ -257,21 +275,22 @@ h1 {
     text-transform: uppercase; 
     letter-spacing: 5px; 
     margin-top: 40px; 
-    animation: bounce 2s infinite; 
-    
-        /* Animación de rebote */
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-30px); /* Movimiento hacia arriba */
-            }
-            60% {
-                transform: translateY(-15px); /* Movimiento hacia abajo */
-            }
-        }
+    animation: bounce 2s infinite;
 }
+
+/* Animación de rebote */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px); /* Movimiento hacia arriba */
+    }
+    60% {
+        transform: translateY(-15px); /* Movimiento hacia abajo */
+    }
+}
+
 .instructions {
     max-width: 800px;
     margin: 0 auto;
@@ -314,4 +333,74 @@ h1 {
 .download-button a:hover {
     background-color: #f44336;
     transform: scale(1.1);
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 1.2rem;
+    }
+
+    section p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilos para dispositivos más pequeños */
+@media (max-width: 480px) {
+    .container {
+        max-width: 95%;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    section {
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .rsvp-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 0.9rem;
+    }
+
+    .photo-gallery h2 {
+        font-size: 1.2rem;
+    }
+
+    .download-button a {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+}
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .carousel-inner img {
+        max-width: 50%; /* Ajusta el ancho máximo de las imágenes */
+        height: auto; /* Mantén la relación de aspecto */
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none; /* Oculta los controles de navegación previos/siguientes */
+    }
 }
