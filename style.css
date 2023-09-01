@@ -8,16 +8,23 @@
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+    background-image: url('img/42.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center;
     margin: 0;
     padding: 0;
 }
+
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #ffffff;
+    background-image: url('img/42.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -238,6 +245,17 @@ button[type="submit"]:hover {
 }
 
 .social-icon img {
-    width: 16px; /* Ajusta el tamaño de acuerdo a tus preferencias */
-    margin-right: 5px; /* Espacio entre el ícono y el texto */
+    width: 16px; 
+    margin-right: 5px; 
+}
+h1 {
+    font-size: 72px; 
+    font-weight: bold; 
+    font-family: 'Georgia', serif; 
+    color:#C45BAA; 
+    text-align: center; 
+    text-transform: uppercase; 
+    letter-spacing: 5px; 
+    margin-top: 40px; 
+    animation: bounce 2s infinite; 
 }
