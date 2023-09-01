@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Walter+Turncoat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>  15 de Catalina</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>¡Te invitamos a la fiesta de 15 de Cata!</h1>
+        </header>
+        <section class="details">
+            <h2>Detalles del Evento</h2>
+            <p>Fecha y Hora: 14 de noviembre, 2023 - 20:00 PM</p>
+            <p>Salón: campo norte</p>
+        </section>
+        <section class="dress-code">
+            <h2>Dress Code</h2>
+            <p>Vístete elegante y acorde a la temática de la fiesta.</p>
+        </section>
+        <section class="gift-info">
+            <h2>Regalos</h2>
+            <p>CBU para regalos: 0720216430000002790083</p>
+            <h2>Mapa de lugares para comprar el regalo:</h2>
+            <hr>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109092.34172993957!2d-64.35862759929067!3d-31.299994896812844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329cf743f976c9%3A0xe0f25d9f302f7b9c!2s47%20street*21!5e0!3m2!1ses-419!2sar!4v1693535225550!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>Ver Mapa</a>
+        </section>
+        <section class="event-location">
+            <h2>Lugar del Evento</h2>
+
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3410.4182477202717!2d-64.2439545260809!3d-31.264524188923335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329b57f690d429%3A0x9eb8d0368802a9ed!2sSal%C3%B3n%20Campo%20Norte!5e0!3m2!1ses-419!2sar!4v1693535311242!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <section class="photo-gallery">
+            <h2>Galería de Fotos</h2>
+            <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/mina 1 formal.webp" alt="Foto 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/mina formal 2.jpg" alt="Foto 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/mina formal 3.jpg" alt="Foto 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/pibe forml 1.jpg" alt="Foto 4">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#imageCarousel" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#imageCarousel" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </section>
+        <section class="rsvp-form">
+            <section class="rsvp-form">
+                <h2>Confirma tu Asistencia</h2>
+                <form action="[URL del servidor]" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Nombre</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Apellido</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dietaryPreferences">Preferencias Alimenticias (opcional)</label>
+                        <textarea id="dietaryPreferences" name="dietaryPreferences" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="attendance">Asistencia</label>
+                        <select id="attendance" name="attendance" required>
+                            <option value="yes">Sí, confirmo mi asistencia</option>
+                            <option value="no">Lamentablemente no podré asistir</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Cantidad de asistentes</label>
+                        <input type="number" id="guests" name="guests" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                    </div>
+                    <button type="submit">Enviar Confirmación</button>
+                </form>
+            </section>
+            
+        </section>
+    </div>
+</body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Delem - Fotografía Profesional</title>
+</head>
+
+<body>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h1>Delem
+                    <a href="" class="social-icon"><img src="img/programacion-web.png" alt=""> </a>
+                </h1>
+                <p>Producciones</p>
+            </div>
+            <div class="footer-contact">
+                <h2>Contacto</h2>
+                <p>Email: info@delemfotos.com</p>
+                <p>Teléfono: +54 3514088669</p>
+            </div>
+            <div class="footer-social">
+                <h2>Redes Sociales</h2>
+                <a href="" class="social-icon"><img src="img/facebook.png" alt=""> Facebook</a>
+                <a href="#" class="social-icon"><img src="img/instagram.png" alt=""> Instagram</a>
+                <a href="#" class="social-icon"><img src="img/signo-de-twitter.png" alt=""> Twitter</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
+
+</html>
